@@ -34,13 +34,13 @@ const Survey = () => {
               }`}
               onPress={() => setSelectedOption(option)}
             >
-              <View style={tw`flex-row items-center`}>
+              <View style={tw`flex-row justify-between items-center`}>
+                <Text style={tw`text-white text-lg`}>{option}</Text>
                 <View
                   style={tw`w-5 h-5 rounded-full border border-gray-500 mr-3 ${
                     selectedOption === option ? 'bg-[#0086FF]' : ''
                   }`}
                 />
-                <Text style={tw`text-white text-lg`}>{option}</Text>
               </View>
             </TouchableOpacity>
           ))}
