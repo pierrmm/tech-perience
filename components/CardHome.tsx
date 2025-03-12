@@ -2,6 +2,7 @@ import { View, Text, Image, TouchableOpacity, ImageSourcePropType } from 'react-
 import React from 'react'
 import tw from 'twrnc'
 import { MaterialIcons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 
 interface CardItemProps {
   image: ImageSourcePropType;
@@ -15,6 +16,8 @@ interface CardHomeProps {
   title: string;
 }
 
+  const navigation = useRouter();
+
 const CardItem = ({ image, title, description, onPress }: CardItemProps) => (
   <TouchableOpacity 
     style={tw`bg-[#1C1C1E] rounded-xl overflow-hidden mb-4 w-[48%]`}
@@ -24,7 +27,7 @@ const CardItem = ({ image, title, description, onPress }: CardItemProps) => (
     <View style={tw`p-3`}>
       <Text style={tw`text-white font-bold text-sm mb-1`}>{title}</Text>
       <Text style={tw`text-gray-400 text-xs`}>{description}</Text>
-      <TouchableOpacity style={tw`mt-2 self-end flex-row items-center`}>
+      <TouchableOpacity style={tw`mt-2 self-end flex-row items-center`} onPress={() => navigation.push('/details')}>
         <Text style={tw`text-gray-200 text-xs mr-1`}>Mulai Belajar</Text>
         <MaterialIcons name="play-circle" size={26} color="#E5E7EB" />
       </TouchableOpacity>    

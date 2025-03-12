@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import { create } from 'twrnc';
 import { useRouter } from 'expo-router';
+import Btn_utama from '@/components/Btn_utama';
 
 const tw = create();
 
@@ -45,12 +46,7 @@ const Survey = () => {
             </TouchableOpacity>
           ))}
         </View>
-        <TouchableOpacity
-          style={tw`bg-[#0086FF] py-3 rounded-lg mb-6`}
-          onPress={() => navigation.push('/(tabs)/home')}
-        >
-          <Text style={tw`text-white text-lg text-center`}>Submit</Text>
-        </TouchableOpacity>
+        <Btn_utama onPress={() => navigation.push('/(tabs)/home')} title="Submit" />
       </ScrollView>
     </SafeAreaView>    );
 };

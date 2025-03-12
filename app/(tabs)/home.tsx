@@ -3,11 +3,12 @@ import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'rea
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { create } from 'twrnc';
-import Button_home from '@/components/button_home';
-import CardHome from '@/components/cardHome';
+
+import CardHome from '@/components/CardHome';
 import CardPnjg from '@/components/CardPnjg';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import ExperienceCardRow from '@/components/ExperienceCard';
+import Button_home from '@/components/Button_home';
 
 const tw = create();
 
@@ -20,19 +21,19 @@ export default function HomeScreen() {
   ]
   const cardItems = [
     {
-      image: require('../../assets/images/pengertian-fungsi-jenis-dan-contoh-perangkat-lunak-lengkap 1.png'),
+      image: require('../../assets/images/2023-blogpost-frontend-solution 1.png'),
       title: 'Fundamental Belajar Design',
       description: 'Belajar design tu ga langsung gambar aja tau ada dasar dasarnya, belajar disini',
-
+      
     },
     {
-      image: require('../../assets/images/desain-komunikasi-visual-1024x576 1.png'),
+      image: require('../../assets/images/2023-blogpost-frontend-solution 1.png'),
       title: 'Fundamental Belajar MySql',
       description: 'Belajar database tu ga langsung ngoding loh, ada dasar dasarnya, belajar disini',
 
     },
     {
-      image: require('../../assets/images/25277-scaled 1.png'),
+      image: require('../../assets/images/2023-blogpost-frontend-solution 1.png'),
       title: 'Fundamental Belajar Jaringan',
       description: 'Belajar jaringan tu ga langsung nyambungin kabel aja dasar dasarnya, belajar disini',
 
@@ -49,7 +50,7 @@ export default function HomeScreen() {
       <ScrollView contentContainerStyle={tw`flex-grow`}>
         <View style={tw`flex-row justify-between items-center px-4 py-2`}>
           <Image
-            source={require('@/assets/images/1. Techxperience - bg dark 1.png')}
+            source={require('../../assets/images/1. Techxperience - bg dark 1.png')}
             style={tw`w-40 h-10`}
             resizeMode="contain"
           />

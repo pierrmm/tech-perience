@@ -5,6 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import { create } from 'twrnc';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import Btn_utama from '@/components/Btn_utama';
 
 const tw = create();
 
@@ -106,9 +107,7 @@ const SignUp = () => {
                     </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity style={tw`bg-[#0086FF] py-4 rounded-lg mb-1`} onPress={() => navigation.push('/survey')}>
-                    <Text style={tw`text-white text-center text-lg`}>Masuk</Text>
-                </TouchableOpacity>
+                <Btn_utama onPress={() => navigation.push('/survey')} title="Masuk" />
 
                 <View style={tw`flex-row justify-center mb-15`}>
                     <Text style={tw`text-white text-lg`}>Lah udah punya akun? </Text>

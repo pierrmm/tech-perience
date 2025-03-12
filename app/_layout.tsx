@@ -36,6 +36,7 @@ export default function RootLayout() {
         <Stack.Screen name="auth/signin" options={{ headerShown: false }} />
         <Stack.Screen name="auth/signup" options={{ headerShown: false }} />
         <Stack.Screen name="survey" options={{ headerShown: false }} />
+        <Stack.Screen name="details" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
