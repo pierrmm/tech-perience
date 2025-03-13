@@ -9,18 +9,18 @@ import Btn_utama from '@/components/Btn_utama';
 
 const DetailsScreen = () => {
   const modules = [
-      {
-        title: 'Fundamentals for Programmer',
-        duration: '30 minutes',
-        lessons: [
-          { title: 'Lesson 1 - Identifying the Need: Market Research Essentials', type: 'Video' },
-          { title: 'Lesson 2 - Building a Solid Business Model Canvas', type: 'Video' },
-          { title: 'Lesson 3', type: 'Attachment' },
-          { title: 'Lesson 4', type: 'Quiz' },
-        ],
-      },
-      // Add more modules as needed
-    ];
+    {
+      title: 'Fundamentals for Programmer',
+      duration: '30 minutes',
+      lessons: [
+        { title: 'Lesson 1 - Identifying the Need: Market Research Essentials', type: 'Video' },
+        { title: 'Lesson 2 - Building a Solid Business Model Canvas', type: 'Video' },
+        { title: 'Lesson 3', type: 'Attachment' },
+        { title: 'Lesson 4', type: 'Quiz' },
+      ],
+    },
+    // Add more modules as needed
+  ];
   const navigation = useRouter();
   const screenWidth = Dimensions.get('window').width;
   const videoHeight = screenWidth * (9 / 16); // 16:9 aspect ratio
@@ -56,7 +56,7 @@ const DetailsScreen = () => {
           </Text>
 
           <View style={tw`flex-row items-center mb-4`}>
-          
+
             <Text style={tw`text-gray-400 text-xs ml-1`}>⭐ 4.5 (673)  •  4 Module  •  Programmer</Text>
           </View>
 
@@ -90,13 +90,12 @@ const DetailsScreen = () => {
                 ))}
               </View>
             ))}
-          </View>        
           </View>
+        </View>
+            <View style={tw`p-4`}>
+        <Btn_utama onPress={() => { }} title="Ikuti Kelas" />
+            </View>
       </ScrollView>
-      
-      <View style={tw`p-4`}>
-      <Btn_utama onPress={() => {}} title="Ikuti Kelas" />
-      </View>
     </SafeAreaView>
   );
 };

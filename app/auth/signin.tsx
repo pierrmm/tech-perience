@@ -6,6 +6,7 @@ import { create } from 'twrnc';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import Btn_utama from '@/components/Btn_utama';
+import LoginOptions from '@/components/LoginOptions';
 
 const tw = create();
 
@@ -20,13 +21,13 @@ const SignIn = () => {
             <StatusBar style="light" />
             <View style={tw`flex-1 px-4 justify-center`}>
                 <View>
-                  <Image 
-                    source={require('../../assets/images/1. Techxperience - bg dark 1.png')}
-                    style={tw`w-40 h-20`}
-                    resizeMode="contain"
-                  />
-                </View>             
-                   <View style={tw`mb-4`}>
+                    <Image
+                        source={require('../../assets/images/1. Techxperience - bg dark 1.png')}
+                        style={tw`w-40 h-20`}
+                        resizeMode="contain"
+                    />
+                </View>
+                <View style={tw`mb-4`}>
                     <TextInput
                         style={tw`bg-black border-2 border-white text-white py-3 px-5 rounded-xl pr-12 text-lg`}
                         placeholder="Masukan Email"
@@ -36,30 +37,30 @@ const SignIn = () => {
                         keyboardType="email-address"
                     />
                 </View>
-                  <View style={tw`mb-4 relative`}>
-                      <TextInput
-                          style={tw`bg-black border-2 border-white text-white py-3 px-5 rounded-xl pr-12 text-lg`}
-                          placeholder="Masukan Password"
-                          placeholderTextColor="#EBEDF0"
-                          secureTextEntry={!showPassword}
-                          value={password}
-                          onChangeText={setPassword}
-                      />
-                      <TouchableOpacity
-                          style={tw`absolute right-4 top-4`}
-                          onPress={() => setShowPassword(!showPassword)}
-                      >
-                          <Ionicons
-                              name={showPassword ? 'eye-off' : 'eye'}
-                              size={26}
-                              color="#EBEDF0"
-                          />
-                      </TouchableOpacity>
-                  </View>
+                <View style={tw`mb-4 relative`}>
+                    <TextInput
+                        style={tw`bg-black border-2 border-white text-white py-3 px-5 rounded-xl pr-12 text-lg`}
+                        placeholder="Masukan Password"
+                        placeholderTextColor="#EBEDF0"
+                        secureTextEntry={!showPassword}
+                        value={password}
+                        onChangeText={setPassword}
+                    />
+                    <TouchableOpacity
+                        style={tw`absolute right-4 top-4`}
+                        onPress={() => setShowPassword(!showPassword)}
+                    >
+                        <Ionicons
+                            name={showPassword ? 'eye-off' : 'eye'}
+                            size={26}
+                            color="#EBEDF0"
+                        />
+                    </TouchableOpacity>
+                </View>
 
                 <View style={tw`mb-4 flex-row justify-between`}>
                     <View style={tw`flex-row items-center mb-2`}>
-                        <TouchableOpacity 
+                        <TouchableOpacity
                             style={tw`flex-row items-center`}
                             onPress={() => setRememberMe(!rememberMe)}
                         >
@@ -85,25 +86,7 @@ const SignIn = () => {
                     </TouchableOpacity>
                 </View>
 
-                <Text style={tw`text-white text-lg text-center mb-5`}>Atau mau masuk melalui?</Text>
-                  <View style={tw`justify-center gap-5 space-x-4`}>
-                      <TouchableOpacity style={tw`bg-neutral-100 items-center justify-center py-3 px-6 rounded-lg flex-row items-center`}>
-                          <Ionicons
-                              name="logo-google"
-                              size={24}
-                              color="#DB4437"
-                          />
-                          <Text style={tw`text-gray-800 text-lg ml-2`}>Masuk dengan Google</Text>
-                      </TouchableOpacity>
-                      <TouchableOpacity style={tw`bg-neutral-100 items-center justify-center py-3 px-6 rounded-lg flex-row items-center`}>
-                          <Ionicons
-                              name="logo-facebook"
-                              size={24}
-                              color="#4267B2"
-                          />
-                          <Text style={tw`text-gray-800 text-lg ml-2`}>Masuk dengan Facebook</Text>
-                      </TouchableOpacity>
-                  </View>
+                <LoginOptions />
             </View>
         </SafeAreaView>
     );
